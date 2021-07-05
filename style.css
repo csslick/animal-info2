@@ -1,0 +1,87 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "나눔고딕", "맑은 고딕", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  text-align: center;
+  background: #2ecc71;
+  width: 100%;
+  color: #fff;
+  padding-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav > ul > li {
+  float: left;
+  /* outline: 1px solid; */
+  width: 33.33%;
+}
+
+/* 기본 */
+nav > ul > li > a{
+  display: block;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/* 현재 메뉴(페이지) */
+nav > ul > li.active > a {
+  color: rgba(255,255,255,1);
+  border-bottom: 4px solid #fff;
+}
+
+header > h1 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#pet {
+  padding: 10px;
+  text-align: center;
+}
+
+#pet > h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.pet-list {
+  overflow: hidden;
+}
+
+.pet-list > li {
+  width: 50%;
+  float: left;
+  padding: 5px;  /* 수정 */
+  position: relative;
+}
+
+.pet-list > li > a > img {
+  width: 100%;
+  display: block;
+}
+
+.pet-list > li > a > .caption {
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  position: absolute;
+  width: calc(100% - 10px); /* 수정: padding크기 제거 */
+  padding: 1em;
+  left: 5px; /* 수정: padding위치 0px -> 5px 보정 */
+  bottom: 5px;
+}
