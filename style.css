@@ -57,7 +57,7 @@ header > h1 {
 
 #pet > h1 {
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .pet-list {
@@ -67,8 +67,9 @@ header > h1 {
 .pet-list > li {
   width: 50%;
   float: left;
-  padding: 5px;  /* 수정 */
+  padding: 0 5px;  /* 수정 */
   position: relative;
+  margin-bottom: 10px;
 }
 
 .pet-list > li > a > img {
@@ -83,5 +84,5 @@ header > h1 {
   width: calc(100% - 10px); /* 수정: padding크기 제거 */
   padding: 1em;
   left: 5px; /* 수정: padding위치 0px -> 5px 보정 */
-  bottom: 5px;
+  bottom: 0px;
 }
