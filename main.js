@@ -126,5 +126,11 @@ $(function(){
   console.log(query[1]);
 
   // 동물 출력 함수: getPetData(type)
-  getPetData(type);
+  // undefined는 전달된 값이 없을때 기본 데이터(개)
+  if(query[1] == undefined) {
+    getPetData('dog');
+  } else {
+    getPetData(type);
+  }
+
 });
