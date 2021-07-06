@@ -92,26 +92,30 @@ const petData = [
   },
 ];
 
-$(function(){
-    var html = ''; // html 변수
-    // 동물 데이터 불러오기
-    for(var i = 0; i < petData.length; i++) {
-      if(petData[i].type == 'dog'){
-        html += `
-        <li>
-          <a href="#">
-            <img 
-              src="${petData[i].imgUrl}"
-              alt="${petData[i].name}"
-            >
-            <div class="caption">
-              <h4>${petData[i].name}</h4>
-            </div>
-          </a>
-        </li>` 
-      }
+function getPetData(type) {
+  var html = ''; // html 변수
+  // 동물 데이터 불러오기
+  for(var i = 0; i < petData.length; i++) {
+    // 해당 type의 동물만 출력
+    if(petData[i].type == type){
+      html += `
+      <li>
+        <a href="#">
+          <img 
+            src="${petData[i].imgUrl}"
+            alt="${petData[i].name}"
+          >
+          <div class="caption">
+            <h4>${petData[i].name}</h4>
+          </div>
+        </a>
+      </li>` 
     }
+  }
 
-    // html 목록 출력
-    $('.pet-list').html(html)
-})
+  // html 목록 출력
+  $('.pet-list').html(html)
+}
+
+// 동물 출력 함수: getPetData(type)
+getPetData('bird');
