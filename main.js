@@ -117,5 +117,14 @@ function getPetData(type) {
   $('.pet-list').html(html)
 }
 
-// 동물 출력 함수: getPetData(type)
-getPetData('bird');
+
+/* 메인 함수 */
+$(function(){
+  // 현재 페이지 URL값에서 type 값을 가져오기
+  var query = location.search.split('=');
+  var type = query[1]
+  console.log(query[1]);
+
+  // 동물 출력 함수: getPetData(type)
+  getPetData(type);
+});
